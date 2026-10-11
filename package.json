@@ -1,0 +1,13 @@
+{
+  "name": "rivallens",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "backend": "cd backend && python -m uvicorn app.main:app --reload --port 8000",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
